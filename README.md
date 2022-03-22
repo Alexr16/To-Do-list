@@ -6,7 +6,7 @@
 
 ## Screenshot
 
-<img src="./images/to-do.png">
+<img src="./to-do.png">
 
 ## Built With
 
