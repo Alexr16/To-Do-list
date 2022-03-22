@@ -1,18 +1,19 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Awesome Books
+# To Do List
 
-> In this project, we built a basic website that allows users to add/remove books from a list. We achieved this by using JavaScript objects and arrays.
+> In this project, I built a simple HTML list of To Do tasks using webpack and served by a webpack dev server.
 
 ## Screenshot
 
-<img src="./screenshot.png">
+<img src="./images/to-do.png">
 
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
+- Webpack
 ## Getting Started
 
 To get a local copy up and running follow this simple step:
