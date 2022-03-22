@@ -1,3 +1,153 @@
 body {
-  background-color: bisque;
+  background-color: #fff;
+}
+
+.container {
+  margin: 2rem auto;
+  text-align: left;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 15%);
+  max-width: 600px;
+  width: 100%;
+}
+
+.list {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0 0 0 / 8%);
+}
+
+.header {
+  height: 50px;
+}
+
+.header,
+.to-do {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0 0 0 / 8%);
+  padding: 0 1rem 0 1rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #545862;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.refresh {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  width: 15px;
+}
+
+.refresh-btn {
+  background: none;
+  width: 100%;
+}
+
+.items {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+form {
+  display: flex;
+  border-bottom: 1px solid rgba(0 0 0 / 8%);
+  height: 50px;
+  padding: 0 1rem;
+}
+
+.add-item {
+  margin: 0 23rem 0 0;
+  font-size: 1em;
+  font-weight: 200;
+  color: #545862;
+  width: 100%;
+  font-style: italic;
+  border: none;
+}
+
+.return {
+  border: none;
+  background-image: url('./images/left.png');
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.clear {
+  margin: 0;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: center;
+  background-color: #c1c4ca3a;
+}
+
+.clear-list {
+  font-size: 1em;
+  font-weight: 200;
+  color: #545862;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.to-do {
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #8e90926c;
+  background: none;
+}
+
+.to-do-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  word-wrap: break-word;
+  padding: 0 1rem;
+  height: 50px;
+}
+
+.item-text {
+  font-size: 1em;
+  font-weight: 200;
+  color: #545862;
+}
+
+.menu {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url('./images/menu.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
 }
