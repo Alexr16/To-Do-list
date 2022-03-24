@@ -6,7 +6,6 @@ import Store from './modules/store.js';
 
 const toDoList = document.getElementById('list-container');
 const addBtn = document.querySelector('.return');
-const menu = document.querySelector('.menu');
 let i = 0;
 
 const ul = document.createElement('ul');

@@ -39,7 +39,7 @@ export default class List {
     removeBtn.classList.add('hide');
     removeBtn.id = 'remove-btn';
 
-    input.addEventListener('click', (e) => {
+    input.addEventListener('click', () => {
       li.classList.toggle('editable');
       btn.classList.toggle('hide');
       removeBtn.classList.toggle('hide');
