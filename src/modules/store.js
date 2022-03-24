@@ -20,7 +20,6 @@ export default class Store {
     list.forEach((task) => {
       if (task.index === index) {
         list.splice(index - 1, 1);
-        // list = list.filter((task) => task.index !== index);
       }
     });
     localStorage.setItem('task', JSON.stringify(list));

@@ -68,7 +68,7 @@ export default class List {
     });
 
     removeBtn.addEventListener('click', () => {
-      ul.removeChild(li); //   Store.updateIndex();
+      ul.removeChild(li);
       Store.remove(task.index);
       window.location.reload();
     });
@@ -79,42 +79,6 @@ export default class List {
     div.appendChild(input);
     li.appendChild(btn);
     li.appendChild(removeBtn);
-    // li.appendChild(div);
-    // li.innerHTML = `
-    //       <button id="check-btn" class="check-box" title="check" alt="check"></button>
-    //       <div class="to-do-item" id="label-task">
-    //         <input type="text" class="item-text" value='${task.description}' >
-    //       </div>
-    //       <button class="menu" id="menu-btn"></button>
-    // `;
-    // ul.appendChild(li);
-    // ul.insertBefore(li, ul.childNodes[0]);
-    // document.querySelector('.item-text').addEventListener('click', this.editEvent());
-    // // document.querySelectorAll('.item-text').forEach((n) => n.addEventListener('click', () => {
-    // //   input.removeAttribute('readonly');
-    // //   const menu = document.querySelectorAll('.menu');
-    // //   const edit = document.querySelectorAll('.to-do');
-    // //   menu.classList.toggle('menu');
-    // //   menu.classList.toggle('delete');
-    // //   edit.classList.toggle('edit-mode');
-    // //   document.querySelector('.item-text').addEventListener('keypress', () => {
-    // //     const description = document.getElementById('description').value;
-    // //     Store.updateInput(description, task.index);
-    // //   });
-    // //   input.setAttribute('readonly');
-    // }));
-    // document.querySelectorAll('.check-box').forEach((n) => n.addEventListener('click', () => {
-    //   const input = document.querySelector('.item-text');
-    //   const check = document.querySelector('#check-btn');
-    //   check.classList.toggle('check-box');
-    //   check.classList.toggle('check-mark');
-    //   input.classList.toggle('line');
-    // //   if (task.state === false) {
-    // //     Store.updateState(task.index, true);
-    // //   } else {
-    // //     Store.updateState(task.index, false);
-    // //   }
-    // }));
   }
 
   static alert(message, className) {
