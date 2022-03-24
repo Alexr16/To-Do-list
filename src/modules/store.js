@@ -18,11 +18,11 @@ export default class Store {
 
   static remove(index) {
     const list = Store.getList();
-    list.forEach((task) => {
-      if (task.index === index) {
+    for (let i = 0; i < list.length; i += 1) {
+      if (list[i].index === index) {
         list.splice(index - 1, 1);
       }
-    });
+    }
     localStorage.setItem('task', JSON.stringify(list));
   }
 
@@ -54,7 +54,7 @@ export default class Store {
 
   static clearCompleted() {
     let list = Store.getList();
-    list.forEach((task) => {
+    list.forEach(() => {
       list = list.filter((task) => task.state !== true);
     });
     localStorage.setItem('task', JSON.stringify(list));
