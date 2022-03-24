@@ -124,6 +124,19 @@ form {
   height: 20px;
   border: 2px solid #8e90926c;
   background: none;
+  cursor: pointer;
+}
+
+.check-mark {
+  cursor: pointer;
+  background: none;
+  background-image: url('./images/check.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  width: 25px;
+  height: 50px;
 }
 
 .to-do-item {
@@ -139,6 +152,10 @@ form {
   font-size: 1em;
   font-weight: 200;
   color: #545862;
+  width: 100%;
+  border: none;
+  background: none;
+  text-decoration: none;
 }
 
 .menu {
@@ -150,4 +167,27 @@ form {
   background-repeat: no-repeat;
   background-position: center;
   height: 20px;
+}
+
+.delete {
+  border: none;
+  background: none;
+  cursor: pointer;
+  background-image: url('./images/delete.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20px;
+}
+
+.edit-mode {
+  background-color: rgb(253, 253, 207);
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.hide {
+  display: none;
 }

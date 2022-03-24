@@ -15,24 +15,37 @@ export default class Store {
     localStorage.setItem('task', JSON.stringify(list));
   }
 
-//   static remove(index) {
-//     const list = Store.getList();
-//     list.forEach((task) => {
-//     //   if (task.index === id) {
-//       list.splice(index - 1, 1);
-//     //   }
-//     });
-//     localStorage.setItem('task', JSON.stringify(list));
-//     this.updateId();
-//   }
-
-    // static updateId() {
-    //   const BOOKS = Store.getBook();
-    //   let i = 0;
-    //   for (let j = 0; j < BOOKS.length; j += 1) {
-    //     i += 1;
-    //     BOOKS[j].id = i;
-    //   }
-    //   localStorage.setItem('books', JSON.stringify(BOOKS));
-    // }
+  static remove(index) {
+    const list = Store.getList();
+    list.forEach((task) => {
+      if (task.index === index) {
+        list.splice(index - 1, 1);
+        // list = list.filter((task) => task.index !== index);
+      }
+    });
+    localStorage.setItem('task', JSON.stringify(list));
+    Store.updateIndex();
   }
+
+  static updateIndex() {
+    const list = Store.getList();
+    let i = 0;
+    for (let j = 0; j < list.length; j += 1) {
+      i += 1;
+      list[j].index = i;
+    }
+    localStorage.setItem('task', JSON.stringify(list));
+  }
+
+  static updateInput(value, task) {
+    const list = Store.getList();
+    list[task.index - 1].description = value;
+    localStorage.setItem('task', JSON.stringify(list));
+  }
+
+  static updateState(index, bool) {
+    const list = Store.getList();
+    list[index].state = bool;
+    localStorage.setItem('task', JSON.stringify(list));
+  }
+}
