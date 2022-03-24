@@ -22,7 +22,7 @@ addBtn.addEventListener('click', (e) => {
   } else {
     const newTask = new Task(description, false, i += 1);
     List.add(newTask);
-    Store.add(newTask);;
+    Store.add(newTask);
     Store.updateIndex();
   }
   input.value = '';
