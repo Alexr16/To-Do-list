@@ -79,7 +79,6 @@ export default class List {
     div.appendChild(input);
     li.appendChild(btn);
     li.appendChild(removeBtn);
-
     // li.appendChild(div);
     // li.innerHTML = `
     //       <button id="check-btn" class="check-box" title="check" alt="check"></button>
