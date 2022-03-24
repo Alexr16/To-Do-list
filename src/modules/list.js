@@ -46,6 +46,7 @@ export default class List {
       li.classList.toggle('edit-mode');
       if (li.classList.contains('editable')) {
         input.removeAttribute('readonly', 'readonly');
+        Store.updateIndex();
       }
     });
 
