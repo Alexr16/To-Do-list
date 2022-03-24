@@ -76,6 +76,15 @@ export default class List {
       Store.updateStorage();
     });
 
+    const clear = document.querySelector('.clear-list');
+    clear.addEventListener('click', () => {
+      if (checkbtn.classList.contains('check-mark')) {
+        Store.clearCompleted();
+        ul.removeChild(li);
+      }
+      Store.updateStorage();
+    });
+
     removeBtn.addEventListener('click', () => {
       ul.removeChild(li);
       Store.remove(task.index);
