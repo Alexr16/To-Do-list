@@ -6,7 +6,6 @@ import Store from './modules/store.js';
 
 const toDoList = document.getElementById('list-container');
 const addBtn = document.querySelector('.return');
-let i = 0;
 
 const ul = document.createElement('ul');
 ul.classList.add('items');
@@ -20,10 +19,11 @@ addBtn.addEventListener('click', (e) => {
   if (description === '') {
     // list.alert('Book cannot be empty', 'danger');
   } else {
-    const newTask = new Task(description, false, i += 1);
+    const list = Store.getList();
+    const index = list.length + 1;
+    const newTask = new Task(description, false, index);
     List.add(newTask);
     Store.add(newTask);
-    Store.updateIndex();
   }
   input.value = '';
 });

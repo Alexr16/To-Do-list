@@ -65,11 +65,30 @@ export default class List {
       checkbtn.classList.toggle('check-box');
       checkbtn.classList.toggle('check-mark');
       input.classList.toggle('line');
+      let value;
+      if (checkbtn.classList.contains('check-mark')) {
+        value = true;
+        Store.updateState(value, task);
+      } else {
+        value = false;
+        Store.updateState(value, task);
+      }
+      Store.updateStorage();
+    });
+
+    const clear = document.querySelector('.clear-list');
+    clear.addEventListener('click', () => {
+      if (checkbtn.classList.contains('check-mark')) {
+        Store.clearCompleted();
+        ul.removeChild(li);
+      }
+      Store.updateStorage();
     });
 
     removeBtn.addEventListener('click', () => {
       ul.removeChild(li);
       Store.remove(task.index);
+      Store.updateIndex();
       window.location.reload();
     });
 

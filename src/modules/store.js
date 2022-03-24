@@ -12,6 +12,7 @@ export default class Store {
   static add(task) {
     const list = Store.getList();
     list.push(task);
+    Store.updateIndex();
     localStorage.setItem('task', JSON.stringify(list));
   }
 
@@ -23,15 +24,12 @@ export default class Store {
       }
     });
     localStorage.setItem('task', JSON.stringify(list));
-    Store.updateIndex();
   }
 
   static updateIndex() {
     const list = Store.getList();
-    let i = 0;
     for (let j = 0; j < list.length; j += 1) {
-      i += 1;
-      list[j].index = i;
+      list[j].index = j + 1;
     }
     localStorage.setItem('task', JSON.stringify(list));
   }
@@ -42,9 +40,24 @@ export default class Store {
     localStorage.setItem('task', JSON.stringify(list));
   }
 
-  static updateState(index, bool) {
+  static updateState(value, task) {
     const list = Store.getList();
-    list[index].state = bool;
+    list[task.index - 1].state = value;
     localStorage.setItem('task', JSON.stringify(list));
+  }
+
+  static updateStorage() {
+    const list = Store.getList();
+    Store.updateIndex();
+    localStorage.setItem('task', JSON.stringify(list));
+  }
+
+  static clearCompleted() {
+    let list = Store.getList();
+    list.forEach((task) => {
+      list = list.filter((task) => task.state !== true);
+    });
+    localStorage.setItem('task', JSON.stringify(list));
+    Store.updateIndex();
   }
 }
