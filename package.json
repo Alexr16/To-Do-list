@@ -1,4 +1,5 @@
 {
+  "homepage":"https://github.io/Alexr16/To-Do-list",
   "name": "to-do-list",
   "version": "1.0.0",
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
@@ -7,6 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
@@ -14,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "gh-pages": "^3.2.3",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "style-loader": "^3.3.1",
@@ -22,7 +25,6 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "gh-pages": "^3.2.3",
     "lodash": "^4.17.21"
   }
 }
