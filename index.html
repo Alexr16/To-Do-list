@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+<script defer src="bundle.js"></script></head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>Demo</h1>
+            </div>
+            <div class="icon">
+                <button class="refresh"><img class="refresh-btn" src="efde49d9123c12eab9a4.png" alt="refresh"></button>
+            </div>
+        </div>
+        <div id="list-container" class="list">
+            <ul class="items">
+                <li>
+                    <form>
+                        <input type="text" placeholder="Add to your list..." class="add-item" id="description">
+                        <input type="submit" title="click this or press enter to submit" class="return" tabindex="-1" value>
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="clear">
+            <button type="button" class="clear-list">Clear all completed</button>
+        </div>
+    </div>
+</body>
+</html>
