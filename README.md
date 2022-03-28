@@ -14,6 +14,9 @@
 - CSS
 - JavaScript
 - Webpack
+
+## Getting Started
+For a live demo [click here](https://alexr16.github.io/To-Do-list/)
 ## Getting Started
 
 To get a local copy up and running follow this simple step:
